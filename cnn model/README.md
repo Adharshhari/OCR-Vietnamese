@@ -30,9 +30,6 @@ PIL
 | FC1			      | 				 |                |               |				|			 |
 | FC2			      | [625, 190]	 |                |               |				|			 |
 
-
-### Results
-![](data/cost.png)
 ```
 Training...
 
@@ -47,59 +44,3 @@ Test Accuracy: 0.974867469544
 ```
 
 
-### Training
-#### Prepare dataset for training
-```
-git clone https://github.com/miendinh/VietnameseOCR.git
-cd VietnameseOCR/data/train/characters
-unzip dataset.zip
-```
-
-#### Let's train.
-```
-python train.py
-```
-
-
-#### Create you own dataset
-##### Prepare fonts for generating text-image
-- You could add more fonts
-```
-cd VietnameseOCR/data/train/characters
-unzip google.zip
-unzip win.zip
-```
-##### Create font list, then save it in fonts.list
-```
-source ./list.sh
-```
-
-##### Generate Text Image Dataset
-```
-python generate_data.py
-```
-
-### Play with pretrained model
-- All pretrained weights of model is save to file vocr.brain
-- Let's test with random character in dataset
-```
-python predict.py
-```
-
-### Further working
-
-- [x] Character classification.
-- [ ] Dataset augmentation.     
-- [ ] Improve accuracy.
-- [ ] Text location.
-- [ ] Text recognition.
-- [ ] Apply NLP for spell checking.
-
-### References
-
-1. [STN-OCR: A single Neural Network for Text Detection and Text Recognition](https://arxiv.org/abs/1707.08831)
-2. [Automatic Dataset Augmentation](https://arxiv.org/abs/1708.08201)
-3. [VGG16 implementation in TensorFlow](http://www.cs.toronto.edu/~frossard/post/vgg16/)
-4. [Vietnamese Dict (VietOCR3)](https://raw.githubusercontent.com/nguyenq/VietOCR3/master/dict/vi_VN.dic)
-
-### Author mien.hust [at] gmail [dot] com
