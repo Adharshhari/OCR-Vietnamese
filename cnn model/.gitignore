@@ -1,0 +1,17 @@
+.idea
+.ftpconfig
+sftp-config.json
+fonts/googles
+fonts/win
+fonts/vi
+test/
+papers/*
+data/train/characters/dataset.csv
+requirement.txt
+GettingStart.ipynb
+.vscode
+
+dict/vi_VN.dic
+word2img.py
+word_ocr_model.py
+word_utils.py
